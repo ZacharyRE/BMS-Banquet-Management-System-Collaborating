@@ -37,14 +37,13 @@ public class DataBaseConnection {
     /**
      * Executes the given SQL statement and returns a ResultSet object.
      *
-     * @param sqlUpdate the SQL statement string to be executed, which may be an INSERT, UPDATE, or DELETE statement or an SQL statement that returns nothing, such as an SQL DDL statement.
-     * @return Either (1) the row count for SQL Data Manipulation Language (DML) statements or (2) 0 for SQL statements that return nothing
+     * @param sqlStatement the SQL statement string to be executed, which may be an INSERT, UPDATE, or DELETE statement or an SQL statement that returns nothing, such as an SQL DDL statement.
      * @throws RuntimeException if a database access error occurs during the query execution
      */
 
-    public int executeUpdate(String sqlUpdate) {
+    public void executeUpdate(String sqlStatement) {
         try {
-            return stmt.executeUpdate(sqlUpdate);
+            stmt.executeUpdate(sqlStatement);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
