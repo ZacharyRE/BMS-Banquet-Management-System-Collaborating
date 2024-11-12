@@ -45,7 +45,7 @@ public class BanquetsManager extends EntityManager {
         List<Banquet> banquets = new ArrayList<>();
         try(PreparedStatement pstmt = dbConnection.prepareStatement(selectAllSQL)) {
             ResultSet resultSet = pstmt.executeQuery();
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 banquets.add(new Banquet(resultSet.getInt(1), resultSet.getString(2),
                         resultSet.getDate(3), resultSet.getString(4),
                         resultSet.getString(5), resultSet.getString(6),
@@ -112,10 +112,15 @@ public class BanquetsManager extends EntityManager {
             ResultSet resultSet = pstmt.executeQuery();
 
             while (resultSet.next()) {
-                banquets.add(new Banquet(resultSet.getInt(1), resultSet.getString(2),
-                        resultSet.getDate(3), resultSet.getString(4),
-                        resultSet.getString(5), resultSet.getString(6),
-                        resultSet.getBoolean(7), resultSet.getInt(8)));
+                banquets.add(new Banquet(
+                        resultSet.getInt(1),
+                        resultSet.getString(2),
+                        resultSet.getDate(3),
+                        resultSet.getString(4),
+                        resultSet.getString(5),
+                        resultSet.getString(6),
+                        resultSet.getBoolean(7),
+                        resultSet.getInt(8)));
             }
 
             return banquets;
