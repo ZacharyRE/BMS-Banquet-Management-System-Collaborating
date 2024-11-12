@@ -1,14 +1,15 @@
 package model;
 import java.sql.*;
 
-public class DatabaseConnection {
+
+public class DataBaseConnection {
     private static final String URL = "";
     private static final String USER = "";
     private static final String PASSWORD = "";
     private static Statement stmt = null;
     private Connection con = null;
 
-    DatabaseConnection() {
+    DataBaseConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); //Corresponding Database Driver
             con = DriverManager.getConnection(URL, USER, PASSWORD);
