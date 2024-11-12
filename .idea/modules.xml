@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/BMS-Banquet-Management-System-Collaborating.iml" filepath="$PROJECT_DIR$/.idea/BMS-Banquet-Management-System-Collaborating.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BanquetManagement.iml" filepath="$PROJECT_DIR$/BanquetManagement.iml" />
     </modules>
   </component>
 </project>
